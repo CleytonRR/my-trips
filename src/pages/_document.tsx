@@ -40,14 +40,7 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang="pt-br">
-        <Head>
-          <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
-            integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
-            crossOrigin=""
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
