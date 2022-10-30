@@ -10,6 +10,8 @@ export default function Place({ place }: PlacesTemplateProps) {
 
   if (router.isFallback) return null
 
+  console.log(place)
+
   return <PlacesTemplate place={place} />
 }
 
@@ -37,7 +39,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      place: places
+      place: places[0]
     }
   }
 }
