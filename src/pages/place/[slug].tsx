@@ -10,8 +10,6 @@ export default function Place({ place }: PlacesTemplateProps) {
 
   if (router.isFallback) return null
 
-  console.log(place)
-
   return <PlacesTemplate place={place} />
 }
 
