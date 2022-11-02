@@ -5,7 +5,6 @@ import { GET_PLACES } from 'graphql/queries'
 import HomeTemplate from 'templates/Home'
 
 export default function Home({ places }: MapProps) {
-  console.log({ places })
   return <HomeTemplate places={places} />
 }
 
