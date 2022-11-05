@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
-import { MapContainer, TileLayer, Marker } from 'react-leaflet'
+import { useEffect } from 'react'
+import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 
 import * as S from './styles'
 
@@ -17,6 +18,23 @@ export type MapProps = {
   places?: Place[]
 }
 
+function MapContext() {
+  const map = useMap()
+
+  useEffect(() => {
+    const width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth
+
+    if (width < 768) {
+      map.setMinZoom(2)
+    }
+  }, [map])
+
+  return null
+}
+
 const Map = ({ places }: MapProps) => {
   const router = useRouter()
 
@@ -26,7 +44,13 @@ const Map = ({ places }: MapProps) => {
         center={[0, 0]}
         zoom={3}
         style={{ height: '100%', width: '100%' }}
+        minZoom={3}
+        maxBounds={[
+          [-180, 180],
+          [180, -180]
+        ]}
       >
+        <MapContext />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
