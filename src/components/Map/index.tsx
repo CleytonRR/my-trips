@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
+import L from 'leaflet'
 
 import * as S from './styles'
 
@@ -34,6 +35,13 @@ function MapContext() {
 
   return null
 }
+
+const markerIcon = new L.Icon({
+  iconUrl: 'img/icon-192.png',
+  iconSize: [40, 40],
+  iconAnchor: [20, 20],
+  popupAnchor: [0, -40]
+})
 
 const Map = ({ places }: MapProps) => {
   const router = useRouter()
@@ -69,6 +77,7 @@ const Map = ({ places }: MapProps) => {
                   router.push(`/place/${slug}`)
                 }
               }}
+              icon={markerIcon}
             />
           )
         })}
