@@ -4,6 +4,8 @@ Projeto feito utilizando NextJs, Typescript, Graphql, Leaflet, React-Leaflet e G
 locais, mostrando foto e vídeos sobre o mesmo. Com ele consegui praticar bastante sobre Graphql, as principais Features do NextJs,
 Deploy na Vercel, testes. Vale a pena conferir.
 
+![My Trips](https://raw.githubusercontent.com/CleytonRR/my-trips/main/demo/demo.png)
+
 ## Variáveis de Ambiente
 
 Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
