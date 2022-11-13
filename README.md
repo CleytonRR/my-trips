@@ -1,4 +1,4 @@
-# My Trips :plane:
+# My Trips :airplane:
 
 Projeto feito utilizando NextJs, Typescript, Graphql, Leaflet, React-Leaflet e GraphCMS, tem como objetivo listar em um mapa
 locais, mostrando foto e vídeos sobre o mesmo. Com ele consegui praticar bastante sobre Graphql, as principais Features do NextJs,
